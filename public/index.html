@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,10 +8,13 @@
       href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
   </head>
-  <body>
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 w-full z-50">
-
+  <body class="scroll-smooth bg-gray-100 dark:bg-gray-800">
+    <nav
+      class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 w-full z-50"
+    >
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
@@ -316,6 +319,47 @@
           <span class="sr-only">Next</span>
         </span>
       </button>
+    </div>
+
+    <div
+      class="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-800"
+    >
+      <div class="text-center">
+        <h1
+          class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+        >
+          Selamat Datang di Bengkel King Bilman
+        </h1>
+        <p
+          class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
+        >
+          Kami adalah bengkel terpercaya yang menyediakan berbagai layanan untuk
+          memastikan kendaraan Anda selalu dalam kondisi terbaik. Dari perawatan
+          rutin hingga perbaikan kompleks, tenaga ahli kami siap melayani Anda
+          dengan profesionalisme dan dedikasi tinggi
+        </p>
+        <a
+          href="#services"
+          class="inline-flex items-center justify-center px-5 py-3 text-base font-normal text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+        >
+          Lihat Selengkapnya
+          <svg
+            class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
     </div>
 
     <section class="bg-white dark:bg-gray-900">
@@ -741,45 +785,6 @@
     </section>
     <!-- pelayanan -->
 
-    <div
-      class="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-800"
-    >
-      <div class="text-center">
-        <h1
-          class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
-        >
-          Kami Menyediakan Bermacam Pelayanan..
-        </h1>
-        <p
-          class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
-        >
-          Here at Flowbite we focus on markets where technology, innovation, and
-          capital can unlock long-term value and drive economic growth.
-        </p>
-        <a
-          href="#services"
-          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
-        >
-          Learn more
-          <svg
-            class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </a>
-      </div>
-    </div>
-
     <div id="services" class="flex justify-center items-center min-h-screen">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <a
@@ -869,6 +874,33 @@
       </div>
     </div>
     <!-- pelayanan end -->
+
+
+
+    
+<script>
+  const scrollLinks = document.querySelectorAll('a[href^="#"]');
+
+  scrollLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); 
+
+      const targetId = link.getAttribute('href').substring(1); 
+      const targetElement = document.getElementById(targetId); 
+
+      if (targetElement) {
+        gsap.to(window, {
+          scrollTo: targetElement,
+          duration: 1,  
+          ease: "power2.out" 
+        });
+      }
+    });
+  });
+</script>
+
+
+     
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="../path/to/flowbite/dist/flowbite.js"></script>
   </body>
