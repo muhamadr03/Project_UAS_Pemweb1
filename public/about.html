@@ -1,11 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Bengkel Kami</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 </head>
-<body>
-    <h1>hello</h1>
+<body class="bg-gray-100">
+<nav
+      class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 w-full z-50"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="https://flowbite.com/"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="https://flowbite.com/docs/images/logo.svg"
+            class="h-8"
+            alt="Flowbite Logo"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Flowbite</span
+          >
+        </a>
+        <div class="flex md:order-2">
+          <button
+            type="button"
+            data-collapse-toggle="navbar-search"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+            class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+            <span class="sr-only">Search</span>
+          </button>
+          <div class="relative hidden md:block">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+              <span class="sr-only">Search icon</span>
+            </div>
+            <input
+              type="text"
+              id="search-navbar"
+              class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Search..."
+            />
+          </div>
+          <button
+            data-collapse-toggle="navbar-search"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-search"
+        >
+          <div class="relative mt-3 md:hidden">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="search-navbar"
+              class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Search..."
+            />
+          </div>
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="service.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="login.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <header class="bg-blue-600 text-white py-6 shadow-md pt-20">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl text-center font-bold">Tentang Bengkel Kami</h1>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-10">
+    <!-- Section 1: Pengenalan -->
+    <section class="mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Selamat Datang di Bengkel Kami</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Bengkel kami telah melayani pelanggan selama lebih dari 10 tahun dengan dedikasi tinggi dalam menyediakan
+            layanan berkualitas. Kami mengutamakan kepuasan pelanggan dengan memberikan perawatan terbaik untuk kendaraan
+            Anda.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            Dengan tim montir berpengalaman dan teknologi terkini, kami siap melayani berbagai jenis kendaraan, mulai dari
+            perawatan rutin hingga perbaikan besar.
+          </p>
+        </div>
+        <div>
+          <img src="img/image.png" alt="Bengkel" class="rounded-lg shadow-md">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Layanan Kami -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-6">Layanan Kami</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Service Besar</h3>
+          <p class="text-gray-600">Perawatan menyeluruh untuk kendaraan Anda agar tetap dalam kondisi terbaik.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Service Ringan</h3>
+          <p class="text-gray-600">Perawatan rutin yang menjaga performa kendaraan Anda setiap hari.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Body Repair</h3>
+          <p class="text-gray-600">Perbaikan bodi kendaraan akibat kerusakan atau kecelakaan.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Detailing</h3>
+          <p class="text-gray-600">Pembersihan dan detailing untuk menjaga kebersihan dan keindahan kendaraan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Tim Kami -->
+    <section id="tim" class="py-12 bg-gray-100">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-gray-800">Tim Montir Kami</h2>
+      <p class="text-gray-600 mt-2">Profesional dan berpengalaman untuk melayani Anda.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Montir 1 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img
+          class="w-full h-48 object-cover"
+          src="img/image.png"
+          alt="Montir 1"
+        />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-gray-800">Montir 1</h3>
+          <p class="text-sm text-gray-600">Spesialisasi: Mesin</p>
+        </div>
+      </div>
+      <!-- Montir 2 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img
+          class="w-full h-48 object-cover"
+          src="img/rojali.png"
+          alt="Montir 2"
+        />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-gray-800">Montir 2</h3>
+          <p class="text-sm text-gray-600">Spesialisasi: Body Repair</p>
+        </div>
+      </div>
+      <!-- Montir 3 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img
+          class="w-full h-48 object-cover"
+          src="img/image.png"
+          alt="Montir 3"
+        />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-gray-800">Montir 3</h3>
+          <p class="text-sm text-gray-600">Spesialisasi: Pembersihan & Detailing</p>
+        </div>
+      </div>
+      <!-- Montir 4 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img
+          class="w-full h-48 object-cover"
+          src="img/image.png"
+          alt="Montir 4"
+        />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-gray-800">Montir 4</h3>
+          <p class="text-sm text-gray-600">Spesialisasi: Elektrik</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Section 4: Testimonial -->
+    
+  </main>
+
+  <footer class="bg-blue-600 text-white py-4 text-center">
+    <p>&copy; 2025 Bengkel Kami. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 </body>
 </html>
