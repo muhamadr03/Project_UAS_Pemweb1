@@ -10,19 +10,14 @@
   <div class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
     <h2 class="text-2xl font-bold mb-6 text-gray-800">Form Pemesanan Service</h2>
     <form id="serviceForm" class="space-y-4">
-      <!-- Nama Pemesan -->
       <div>
         <label for="nama" class="block text-sm font-medium text-gray-700">Nama Pemesan</label>
         <input type="text" id="nama" name="nama" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Masukkan nama Anda" required>
       </div>
-
-      <!-- Jenis Kendaraan -->
       <div>
         <label for="jenis-kendaraan" class="block text-sm font-medium text-gray-700">Jenis Kendaraan</label>
         <input type="text" id="jenis-kendaraan" name="jenis-kendaraan" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Contoh: Mobil, Motor" required>
       </div>
-
-      <!-- Kategori Service -->
       <div>
         <label for="kategori-service" class="block text-sm font-medium text-gray-700">Kategori Service</label>
         <select id="kategori-service" name="kategori-service" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
@@ -33,58 +28,39 @@
           <option value="detailing">Pembersihan & Detailing</option>
         </select>
       </div>
-
-      <!-- Deskripsi Kebutuhan -->
       <div>
         <label for="deskripsi" class="block text-sm font-medium text-gray-700">Deskripsi Kebutuhan</label>
         <textarea id="deskripsi" name="deskripsi" rows="4" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Jelaskan kebutuhan service Anda" required></textarea>
       </div>
-
-      <!-- Tanggal dan Jam Service -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- Tanggal -->
         <div>
           <label for="tanggal" class="block text-sm font-medium text-gray-700">Tanggal Service</label>
           <input type="date" id="tanggal" name="tanggal" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
         </div>
-
-        <!-- Jam -->
         <div>
           <label for="jam" class="block text-sm font-medium text-gray-700">Jam Service</label>
           <input type="time" id="jam" name="jam" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
         </div>
       </div>
-
-      <!-- Request Montir -->
       <div>
         <label for="request-montir" class="block text-sm font-medium text-gray-700">Request Montir (Opsional)</label>
         <input type="text" id="request-montir" name="request-montir" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Nama montir tertentu (jika ada)">
       </div>
-
-      <!-- No Telepon -->
       <div>
         <label for="telepon" class="block text-sm font-medium text-gray-700">No Telepon</label>
         <input type="tel" id="telepon" name="telepon" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Masukkan nomor telepon Anda" required>
       </div>
-
-      <!-- Email -->
       <div>
         <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
         <input type="email" id="email" name="email" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Masukkan email Anda" required>
       </div>
-
-      <!-- Pesan Pembayaran -->
       <div>
         <p class="text-sm text-gray-700">Silakan melakukan pembayaran ke rekening BCA nomor 123456 setelah mengisi formulir ini.</p>
       </div>
-
-      <!-- Input Bukti Pembayaran -->
       <div>
         <label for="bukti-pembayaran" class="block text-sm font-medium text-gray-700">Bukti Pembayaran</label>
         <input type="file" id="bukti-pembayaran" name="bukti-pembayaran" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" accept="image/*,application/pdf">
       </div>
-
-      <!-- Submit -->
       <div class="flex justify-end space-x-4">
         <button type="reset" class="px-6 py-2 bg-gray-300 text-gray-800 rounded-md shadow-sm hover:bg-gray-400">Reset</button>
         <button type="submit" class="px-6 py-2 bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600">Submit</button>
@@ -95,19 +71,13 @@
   <script>
     const form = document.getElementById('serviceForm');
     form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Mencegah reload halaman
-
-      // Ambil data dari form
+      event.preventDefault();
       const formData = new FormData(form);
       const data = {};
       formData.forEach((value, key) => {
         data[key] = value;
       });
-
-      // Simpan ke localStorage
       localStorage.setItem('pemesananService', JSON.stringify(data));
-
-      // Arahkan ke halaman hasil
       window.location.href = 'hasil-pemesanan.html';
     });
   </script>

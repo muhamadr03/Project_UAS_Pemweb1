@@ -6,19 +6,12 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
   <script>
-    // Simpan username dan password yang valid
     const validUsername = "admin";
     const validPassword = "1234";
-
-    // Fungsi untuk memproses login
     function processLogin(event) {
-      event.preventDefault(); // Mencegah reload halaman saat submit form
-
-      // Ambil nilai input
+      event.preventDefault();
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
-
-      // Validasi login
       if (username === validUsername && password === validPassword) {
         alert("Login berhasil! Selamat datang, " + username);
         window.location.href = "index.html";
