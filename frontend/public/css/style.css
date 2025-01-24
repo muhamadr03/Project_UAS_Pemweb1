@@ -6236,8 +6236,25 @@ textarea:focus-visible {
   background-color: rgb(255 255 255 / 0.5);
 }
 
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'https\:\/\/flowbite\.s3\.amazonaws\.com\/docs\/jumbotron\/conference\.jpg\'\)\] {
+  background-image: url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg');
+}
+
+.bg-\[url\(\'img\/bengkel\.jpg\'\)\] {
+  background-image: url('img/bengkel.jpg');
+}
+
+.bg-\[url\(\'public\/img\/bengkel\.jpg\'\)\] {
+  background-image: url('public/img/bengkel.jpg');
 }
 
 .from-blue-500 {
@@ -6248,6 +6265,14 @@ textarea:focus-visible {
 
 .to-purple-600 {
   --tw-gradient-to: #7E3AF2 var(--tw-gradient-to-position);
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .object-cover {
@@ -6361,6 +6386,7 @@ textarea:focus-visible {
   padding-bottom: 2rem;
 }
 
+<<<<<<< HEAD:frontend/public/css/style.css
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -6369,6 +6395,11 @@ textarea:focus-visible {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+=======
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+>>>>>>> 3ac439145204ede349eaea07e221a3282d4c894e:public/css/style.css
 }
 
 .pl-10 {
@@ -6541,12 +6572,21 @@ textarea:focus-visible {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
 .opacity-0 {
   opacity: 0;
 }
 
 .opacity-100 {
   opacity: 1;
+}
+
+.bg-blend-multiply {
+  background-blend-mode: multiply;
 }
 
 .shadow {
@@ -7043,8 +7083,22 @@ textarea:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
   .sm\:flex-nowrap {
     flex-wrap: nowrap;
+  }
+
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
+  .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .sm\:rounded-none {
@@ -7222,6 +7276,7 @@ textarea:focus-visible {
     padding-bottom: 4rem;
   }
 
+<<<<<<< HEAD:frontend/public/css/style.css
   .lg\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -7229,6 +7284,16 @@ textarea:focus-visible {
 
   .lg\:pl-3 {
     padding-left: 0.75rem;
+=======
+  .lg\:px-48 {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+
+  .lg\:py-56 {
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+>>>>>>> 3ac439145204ede349eaea07e221a3282d4c894e:public/css/style.css
   }
 
   .lg\:text-6xl {
