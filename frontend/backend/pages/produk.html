@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>Admin | Dashboard</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -166,7 +166,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">Dashboard Admin</span>
     </a>
 
     <!-- Sidebar -->
@@ -177,7 +177,7 @@
           <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Bengkel King Bili</a>
+          <a href="#" class="d-block">Bengkel King</a>
         </div>
       </div>
 
@@ -198,28 +198,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link">
-              <p>
-                Transaksi
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./cart.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Cart</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./service.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Service</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+        
           <li class="nav-item">
             <a href="./produk.html" class="nav-link active">
               <p>
@@ -251,6 +230,81 @@
   <section class="content">
     <div class="container-fluid">
       
+      <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h1>Daftar Transaksi</h1>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">Tambah</button>
+        </div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Admin</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Daftar Peminjam</li>
+          </ol>
+        </nav>
+        <table class="table table-bordered table-striped" id="transactionTable">
+          <thead class="table-dark">
+            <tr>
+              <th>No</th>
+              <th>Tanggal</th>
+              <th>Pelanggan</th>
+              <th>Nopol</th>
+              <th>Kategori</th>
+              <th>Keluhan</th>
+              <th>Layanan</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data akan diisi otomatis -->
+          </tbody>
+        </table>
+      </div>
+    
+      <!-- Modal Tambah Data -->
+      <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addModalLabel">Tambah Transaksi Baru</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="addForm">
+                <div class="mb-3">
+                  <label for="addTanggal" class="form-label">Tanggal</label>
+                  <input type="date" class="form-control" id="addTanggal" required>
+                </div>
+                <div class="mb-3">
+                  <label for="addPelanggan" class="form-label">Pelanggan</label>
+                  <input type="text" class="form-control" id="addPelanggan" required>
+                </div>
+                <div class="mb-3">
+                  <label for="addNopol" class="form-label">Nopol</label>
+                  <input type="text" class="form-control" id="addNopol" required>
+                </div>
+                <div class="mb-3">
+                  <label for="addKategori" class="form-label">Kategori</label>
+                  <input type="text" class="form-control" id="addKategori" required>
+                </div>
+                <div class="mb-3">
+                  <label for="addKeluhan" class="form-label">Keluhan</label>
+                  <input type="text" class="form-control" id="addKeluhan" required>
+                </div>
+                <div class="mb-3">
+                  <label for="addLayanan" class="form-label">Layanan</label>
+                  <input type="text" class="form-control" id="addLayanan" required>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="addTransaction()">Tambah</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
     </div>
   </section>
  
