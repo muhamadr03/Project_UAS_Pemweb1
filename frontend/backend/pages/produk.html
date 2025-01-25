@@ -229,7 +229,6 @@
   <!-- Content Wrapper. Contains page content -->
   <section class="content-wrapper">
     <div class="container-fluid">
-      
       <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-3">
           <h1>Daftar Transaksi</h1>
@@ -304,18 +303,8 @@
           </div>
         </div>
       </div>
-    
     </div>
   </section>
- 
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0
-    </div>
-  </footer>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -324,6 +313,8 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
+
+
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
@@ -341,5 +332,61 @@
 <script src="../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
+<script>
+  const transactions = [];
+
+  // Fungsi untuk memuat data ke tabel
+  function loadTransactions() {
+    const tableBody = document.getElementById("transactionTable").getElementsByTagName("tbody")[0];
+    tableBody.innerHTML = ""; // Bersihkan isi tabel
+    transactions.forEach((transaction, index) => {
+      const row = tableBody.insertRow();
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${transaction.tanggal}</td>
+        <td>${transaction.pelanggan}</td>
+        <td>${transaction.nopol}</td>
+        <td>${transaction.kategori}</td>
+        <td>${transaction.keluhan}</td>
+        <td>${transaction.layanan}</td>
+        <td>
+          <button class="btn btn-warning btn-sm" onclick="editTransaction(${index})">Edit</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteTransaction(${index})">Delete</button>
+        </td>
+      `;
+    });
+  }
+
+  // Fungsi untuk menambah data
+  function addTransaction() {
+    const newTransaction = {
+      tanggal: document.getElementById("addTanggal").value, // Pastikan ID ini benar
+      pelanggan: document.getElementById("addPelanggan").value,
+      nopol: document.getElementById("addNopol").value,
+      kategori: document.getElementById("addKategori").value,
+      keluhan: document.getElementById("addKeluhan").value,
+      layanan: document.getElementById("addLayanan").value
+    };
+    transactions.push(newTransaction);
+    document.getElementById("addForm").reset();
+    const modal = bootstrap.Modal.getInstance(document.getElementById("addModal"));
+    modal.hide();
+    loadTransactions();
+  }
+
+  // Fungsi untuk menghapus data
+  function deleteTransaction(index) {
+    transactions.splice(index, 1);
+    loadTransactions();
+  }
+
+  // Fungsi untuk mengedit data
+  function editTransaction(index) {
+    // Fitur ini bisa dikembangkan lebih lanjut, seperti menampilkan modal untuk mengedit.
+    alert("Edit fitur dalam pengembangan.");
+  }
+
+  document.addEventListener("DOMContentLoaded", loadTransactions);
+</script>
 </body>
 </html>
